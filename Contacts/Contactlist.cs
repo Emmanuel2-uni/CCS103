@@ -139,7 +139,7 @@ public class Contactlist{
         
         if(flag == 1)
         {
-            //Editting email address
+            //Editing email address
             System.Console.Write("\nInput new email address: ");
             input = System.Console.ReadLine();
                 if(input == "0"){
@@ -201,7 +201,7 @@ public class Contactlist{
 
         if(flag == 1)
         {
-            //Editting email address
+            //Editing email address
             System.Console.Write("\nInput new email address: ");
             input = System.Console.ReadLine();
                 if(input == "0"){
@@ -211,7 +211,7 @@ public class Contactlist{
         }
         else if(flag == 2)
         {
-            //editting number
+            //Editing number
             System.Console.Write("\nInput new number: ");
             input = System.Console.ReadLine();
                 if(input == "0"){
