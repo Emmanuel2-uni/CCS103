@@ -27,6 +27,8 @@ do{
     System.Console.WriteLine("4. Edit Contact by Order");
     System.Console.WriteLine("5. Sort Contact - By...");
     System.Console.WriteLine("6. Exit ");
+
+    System.Console.WriteLine("77. Switch Orders ");
     System.Console.Write("\n\nEnter choice: ");
     choice = Convert.ToInt32(System.Console.ReadLine());
 
@@ -190,7 +192,34 @@ do{
             flag = 0;
         break;
 
+        //============
+        //Switch orders
+        case 77:
+            System.Console.Clear();
+            contacts.display_Contacts();
+            int order_one = 0;
+            int order_two = 0;
+            System.Console.WriteLine("Choose two orders to switch their places. \n");  
 
+            System.Console.Write("Choose first order [0 to exit]: ");  
+            order_one = Convert.ToInt32(System.Console.ReadLine());
+                if(order_one == 0)
+                    break;
+            order_one--;
+          
+            System.Console.Write("Choose second order [0 to exit]: ");  
+            order_two = Convert.ToInt32(System.Console.ReadLine());
+                if(order_one == 0)
+                    break;
+            order_two--;
+
+
+            contacts.switch_orders(order_one, order_two);
+
+
+
+
+        break;
 
         default:
 

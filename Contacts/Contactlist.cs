@@ -139,7 +139,7 @@ public class Contactlist{
         
         if(flag == 1)
         {
-            //Editing email address
+            //Editting email address
             System.Console.Write("\nInput new email address: ");
             input = System.Console.ReadLine();
                 if(input == "0"){
@@ -201,7 +201,7 @@ public class Contactlist{
 
         if(flag == 1)
         {
-            //Editing email address
+            //Editting email address
             System.Console.Write("\nInput new email address: ");
             input = System.Console.ReadLine();
                 if(input == "0"){
@@ -211,7 +211,7 @@ public class Contactlist{
         }
         else if(flag == 2)
         {
-            //Editing number
+            //editting number
             System.Console.Write("\nInput new number: ");
             input = System.Console.ReadLine();
                 if(input == "0"){
@@ -223,6 +223,37 @@ public class Contactlist{
         {
             System.Console.WriteLine("Wrong data choice.");
         }
+
+    }
+
+    public void switch_orders(int order_one, int order_two)
+    {
+        int index_one = 0;
+        int index_two = 0;
+
+        //find the first order.
+        for(int i = 0; i < contacts.Count; i++)
+        {
+            if(contacts[i].order == order_one+1)
+            {
+                index_one = i;
+                break;
+            }
+        }
+
+        //find the second order.
+        for(int i = 0; i < contacts.Count; i++)
+        {
+            if(contacts[i].order == order_two+1)
+            {
+                index_two = i;
+                break;
+            }
+        }
+
+        contacts[index_one].order = order_two+1;
+        contacts[index_two].order = order_one+1;
+
 
     }
 }
