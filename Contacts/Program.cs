@@ -95,11 +95,11 @@ do{
                     break;
                 }
             contacts.search_Contacts(input_name);
-            System.Console.Write("\nWould you like to edit " + input_name + "? [1-Yes | 0-No] "); 
+            System.Console.Write("\nWould you like to edit " + input_name + "? [1-Yes | 2-No] "); 
             choice_editsearch = Convert.ToInt32(System.Console.ReadLine());
                 if(choice_editsearch == 1)
                     choice_editsearch = 1;
-                else if(choice_editsearch ==2)
+                else if(choice_editsearch == 2)
                     break;
 
             do
